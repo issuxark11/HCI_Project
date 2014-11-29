@@ -5,10 +5,10 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string-array name="speed_array">
-        <item>x 0.5</item>
-        <item>x 1.0</item>
-        <item>x 1.2</item>
-        <item>x 1.5</item>
-        <item>x 2.0</item>
+        <item> x 0.5 </item>
+        <item> x 1.0 </item>
+        <item> x 1.2 </item>
+        <item> x 1.5 </item>
+        <item> x 2.0 </item>
     </string-array>
 </resources>
