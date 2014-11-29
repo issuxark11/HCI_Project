@@ -24,15 +24,19 @@ public class MainActivity extends Activity {
     public void SelectFragment(View view) {
         Fragment fr;
 
+
         if (view == findViewById(R.id.SpBtn)) {
             fr = new FragmentSP();
+
         } else {
             fr = new FragmentLC();
         }
 
         FragmentManager fm = getFragmentManager();
+        fm.popBackStack();
         FragmentTransaction fragmentTransaction = fm.beginTransaction();
         fragmentTransaction.replace(R.id.fragment_main, fr);
+        fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
     }
 }

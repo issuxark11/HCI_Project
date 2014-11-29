@@ -23,10 +23,10 @@ public class FragmentLC extends Fragment{
 
     TextView Title_LC;
     WebView Webview;   // script 창을 불러온다.
-    ImageButton Stopebtn;
-    ImageButton Controlbtn; // Play/Pause
-    int ControlFlag=0;
-    ImageButton Folderbtn;
+    ImageButton Stopbtn_LC;
+    ImageButton Controlbtn_LC; // Play/Pause
+    int ControlFlag_LC=0;
+    ImageButton Folderbtn_LC;
     Spinner Spinner;   // 배속 선택
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
@@ -69,20 +69,20 @@ public class FragmentLC extends Fragment{
         // Stopebtn 처리 부분
 
         // Controlybtn 처리 부분
-        Controlbtn = (ImageButton) view.findViewById(R.id.ControlBtnLC);
-        Controlbtn.setOnClickListener(new View.OnClickListener() {
+        Controlbtn_LC = (ImageButton) view.findViewById(R.id.ControlBtnLC);
+        Controlbtn_LC.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (ControlFlag == 0) {
-                    Controlbtn.setSelected(true);
-                    ControlFlag = 1;
-                    Controlbtn.setBackgroundResource(R.drawable.pause);
+                if (ControlFlag_LC == 0) {
+                    Controlbtn_LC.setSelected(true);
+                    ControlFlag_LC = 1;
+                    Controlbtn_LC.setBackgroundResource(R.drawable.pause);
                 }
                 else
                 {
-                    Controlbtn.setSelected(false);
-                    ControlFlag = 0;
-                    Controlbtn.setBackgroundResource(R.drawable.play);
+                    Controlbtn_LC.setSelected(false);
+                    ControlFlag_LC = 0;
+                    Controlbtn_LC.setBackgroundResource(R.drawable.play);
                 }
             }
             });
@@ -90,5 +90,11 @@ public class FragmentLC extends Fragment{
         // Folderbtn 처리 부분
 
         return view;
+    }
+
+    @Override
+    public void onDestroyView()
+    {
+        super.onDestroyView();
     }
 }
