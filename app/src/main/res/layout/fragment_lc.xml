@@ -1,17 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#00ffff">
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/Title_LC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_centerHorizontal="true"
+        style="@style/titleStyle"/>
+
+    <WebView
+        android:id="@+id/webView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:text="This is fragment No.1"
-        android:textStyle="bold" />
+        android:layout_margin="15dp"
+        android:layout_below="@+id/Title_LC"
+        android:layout_above="@+id/StopBtnLC"
+        android:layout_alignParentStart="true" />
 
-</LinearLayout>
+    <ImageButton
+        android:id="@+id/StopBtnLC"
+        android:background="@drawable/stop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageButton
+        android:id="@+id/PlayBtnLC"
+        android:background="@drawable/play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/StopBtnLC" />
+
+    <ImageButton
+        android:id="@+id/FolderBtnLC"
+        android:background="@drawable/folder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="22dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/PlayBtnLC" />
+
+</RelativeLayout>

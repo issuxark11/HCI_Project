@@ -7,15 +7,27 @@ import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 
 public class MainActivity extends Activity {
+
+    private TextView Title_LC;
+    private Button StopBtn_LC;
+    private Button PlayBtn_LC;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         ActionBar actionBar = getActionBar();
         actionBar.hide();
+
+        Title_LC = (TextView) findViewById(R.id.Title_LC);
+        Title_LC.setText("Title");
+
     }
 
     public void SelectFragment(View view) {

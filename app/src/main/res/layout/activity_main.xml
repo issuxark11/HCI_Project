@@ -2,6 +2,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginLeft="10dp"
     tools:context=".MainActivity">
 
     <Button
@@ -9,9 +13,8 @@
         android:text="Listening"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
-        android:layout_marginLeft="85dp"
+        android:layout_marginLeft="73dp"
         android:onClick="SelectFragment" />
 
     <Button
@@ -19,10 +22,9 @@
         android:text="Speaking"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toEndOf="@+id/LcBtn"
-        android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
         android:layout_marginLeft="10dp"
+        android:layout_toEndOf="@+id/LcBtn"
         android:onClick="SelectFragment" />
 
     <fragment
@@ -30,7 +32,6 @@
         android:name="example.android.issuxark11.hci_lsl_player.FragmentLC"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/LcBtn"
-        tools:layout="@layout/FragmentLC" />
+        android:layout_below="@+id/LcBtn" />
 
 </RelativeLayout>

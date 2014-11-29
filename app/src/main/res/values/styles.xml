@@ -5,4 +5,9 @@
         <!-- Customize your theme here. -->
     </style>
 
+    <style name="titleStyle" parent="@android:style/TextAppearance.Large">
+        <item name="android:textColor">#2E9AFE</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
 </resources>
