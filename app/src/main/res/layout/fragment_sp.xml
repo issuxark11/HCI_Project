@@ -1,59 +1,122 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    android:background="#f0f0f0">
 
     <RelativeLayout
         android:id="@+id/sp_layout1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="300dp">
 
         <TextView
             android:id="@+id/recordtime"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            style="@style/titleStyle" />
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="150dp"
+            style="@style/SPRStyle" />
+
+        <ImageButton
+            android:id="@+id/StopBtnSPR"
+            android:background="@drawable/stop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="45dp"
+            android:layout_below="@+id/recordtime" />
+
+        <ImageButton
+            android:id="@+id/RecordBtnSPR"
+            android:background="@drawable/record"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="50dp"
+            android:layout_below="@+id/recordtime"
+            android:layout_toEndOf="@+id/StopBtnSPR"/>
+
+        <ImageButton
+            android:id="@+id/TimerSPR"
+            android:background="@drawable/timer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="50dp"
+            android:layout_below="@+id/recordtime"
+            android:layout_toEndOf="@+id/RecordBtnSPR"
+            />
 
     </RelativeLayout>
+
+    <View android:layout_width="fill_parent"
+        android:layout_height="5dp"
+        android:layout_marginBottom="20dp"
+        android:layout_below="@id/sp_layout1"
+        android:background="#00ff00" />
 
     <RelativeLayout
         android:id="@+id/sp_layout2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/sp_layout1">
+        android:layout_below="@+id/sp_layout1"
+        android:layout_alignParentBottom="true" >
+
+        <TextView
+            android:id="@+id/TitleSPP"
+            android:text="No file to play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_above="@+id/PlayTimeSPP"
+            style="@style/SPPStyle" />
+
+        <TextView
+            android:id="@+id/PlayTimeSPP"
+            android:text="00:00"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:layout_above="@+id/StopBtnSPP"
+            style="@style/SPPStyle" />
 
         <ImageButton
-            android:id="@+id/StopBtnSP"
+            android:id="@+id/StopBtnSPP"
             android:background="@drawable/stop"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:layout_marginLeft="50dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="45dp"
             android:layout_alignParentBottom="true"
             android:layout_alignParentStart="true" />
 
         <ImageButton
-            android:id="@+id/ControlBtnSP"
+            android:id="@+id/ControlBtnSPP"
             android:background="@drawable/play"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:layout_marginLeft="50dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="40dp"
             android:layout_alignParentBottom="true"
-            android:layout_toEndOf="@+id/StopBtnSP" />
+            android:layout_toEndOf="@+id/StopBtnSPP" />
 
         <ImageButton
-            android:id="@+id/FolderBtnSP"
+            android:id="@+id/FolderBtnSPP"
             android:background="@drawable/folder"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="50dp"
-            android:layout_marginBottom="20dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginBottom="30dp"
             android:layout_alignParentBottom="true"
-            android:layout_toEndOf="@+id/ControlBtnSP" />
+            android:layout_toEndOf="@+id/ControlBtnSPP" />
 
     </RelativeLayout>
 

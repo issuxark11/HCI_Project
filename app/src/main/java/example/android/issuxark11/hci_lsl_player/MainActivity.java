@@ -7,8 +7,6 @@ import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
 
 public class MainActivity extends Activity {
 
@@ -23,7 +21,6 @@ public class MainActivity extends Activity {
 
     public void SelectFragment(View view) {
         Fragment fr;
-
 
         if (view == findViewById(R.id.SpBtn)) {
             fr = new FragmentSP();
