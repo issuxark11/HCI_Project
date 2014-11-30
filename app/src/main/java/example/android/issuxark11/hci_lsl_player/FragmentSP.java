@@ -90,7 +90,6 @@ public class FragmentSP extends Fragment {
                 }
             }
         });
-
         return view;
     }
 
@@ -102,11 +101,9 @@ public class FragmentSP extends Fragment {
 
     public static class TimeCounter{
         private long startTime;
-
         public TimeCounter(){
             startTime = new Date().getTime();
         }
-
         public long countTime(){
             return new Date().getTime() - startTime;
         }
@@ -133,8 +130,7 @@ public class FragmentSP extends Fragment {
             long millis = values[0].longValue();
             int minutes = (int) ((millis / 1000) / 60);
             int seconds = (int) ((millis / 1000) % 60);
-            String s = String.format("%02d : %02d",
-                    minutes, seconds);
+            String s = String.format("%02d : %02d", minutes, seconds);
             RecordTime.setText(s);
         }
     }
@@ -160,8 +156,7 @@ public class FragmentSP extends Fragment {
             long millis = values[0].longValue();
             int minutes = (int) ((millis / 1000) / 60);
             int seconds = (int) ((millis / 1000) % 60);
-            String s = String.format("%02d : %02d",
-                    minutes, seconds);
+            String s = String.format("%02d : %02d", minutes, seconds);
             PlayTime.setText(s);
         }
     }
