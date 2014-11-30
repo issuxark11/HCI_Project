@@ -16,12 +16,13 @@ public class FragmentSP extends Fragment {
 
     TextView RecordTime;
     ImageButton Stopbtn_SP1;
-    ImageButton Controlbtn_SPR; // Play/Pause
+    ImageButton Recordbtn_SPR; // Record/Pause
+    int ControlFlag_SPR=0;
     ImageButton Timer_SP;
 
     TextView Title_SP;
     TextView PlayTime;
-    ImageButton Controlbtn_SPP;
+    ImageButton Controlbtn_SPP;  // Play/Pause
     int ControlFlag_SPP=0;
     ImageButton Folderbtn_SP;
 
@@ -33,7 +34,26 @@ public class FragmentSP extends Fragment {
         RecordTime = (TextView) view.findViewById(R.id.recordtime);
         RecordTime.setText("00:00");
 
-        // Controlybtn 처리 부분
+        // Controlbtn1(Record/pause) 처리 부분
+        Recordbtn_SPR = (ImageButton) view.findViewById(R.id.RecordBtnSPR);
+        Recordbtn_SPR.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (ControlFlag_SPR == 0) {
+                    Recordbtn_SPR.setSelected(true);
+                    ControlFlag_SPR = 1;
+                    Recordbtn_SPR.setBackgroundResource(R.drawable.pause_r);
+                }
+                else
+                {
+                    Recordbtn_SPR.setSelected(false);
+                    ControlFlag_SPR = 0;
+                    Recordbtn_SPR.setBackgroundResource(R.drawable.record);
+                }
+            }
+        });
+
+        // Controlbtn2(Play/Pause) 처리 부분
         Controlbtn_SPP = (ImageButton) view.findViewById(R.id.ControlBtnSPP);
         Controlbtn_SPP.setOnClickListener(new View.OnClickListener() {
             @Override
