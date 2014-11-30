@@ -17,7 +17,7 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="30dp"
-            android:layout_marginBottom="90dp"
+            android:layout_marginBottom="100dp"
             android:background="@drawable/box_full"
             style="@style/SPRStyle" />
 
@@ -26,7 +26,6 @@
             android:background="@drawable/stop"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
             android:layout_marginLeft="45dp"
             android:layout_below="@+id/recordtime" />
 
@@ -35,8 +34,7 @@
             android:background="@drawable/record"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="50dp"
+            android:layout_marginLeft="42dp"
             android:layout_below="@+id/recordtime"
             android:layout_toEndOf="@+id/StopBtnSPR"/>
 
@@ -45,8 +43,7 @@
             android:background="@drawable/timer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:layout_marginLeft="50dp"
+            android:layout_marginLeft="48dp"
             android:layout_below="@+id/recordtime"
             android:layout_toEndOf="@+id/RecordBtnSPR"
             />
@@ -54,10 +51,9 @@
     </RelativeLayout>
 
     <View android:layout_width="fill_parent"
-        android:layout_height="5dp"
-        android:layout_marginBottom="20dp"
+        android:layout_height="3dp"
         android:layout_below="@id/sp_layout1"
-        android:background="#00ff00" />
+        android:background="#a9a9a9" />
 
     <RelativeLayout
         android:id="@+id/sp_layout2"
@@ -72,7 +68,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:layout_above="@+id/PlayTimeSPP"
             style="@style/SPPStyle" />
@@ -122,4 +117,3 @@
     </RelativeLayout>
 
 </RelativeLayout>
-

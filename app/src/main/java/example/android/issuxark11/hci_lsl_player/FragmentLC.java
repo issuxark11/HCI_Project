@@ -35,7 +35,7 @@ public class FragmentLC extends Fragment{
 
         // Set Default Title
         Title_LC = (TextView) view.findViewById(R.id.Title_LC);
-        Title_LC.setText("Title");
+        Title_LC.setText("Test03.mp3");
 
         // Script 처리 부분
         Webview = (WebView) view.findViewById(R.id.ScriptView);
@@ -66,9 +66,9 @@ public class FragmentLC extends Fragment{
             }
         });
 
-        // Stopebtn 처리 부분
+        // Stopbtn 처리 부분
 
-        // Controlybtn 처리 부분
+        // Controlbtn 처리 부분
         Controlbtn_LC = (ImageButton) view.findViewById(R.id.ControlBtnLC);
         Controlbtn_LC.setOnClickListener(new View.OnClickListener() {
             @Override
