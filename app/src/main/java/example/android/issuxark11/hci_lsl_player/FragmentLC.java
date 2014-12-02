@@ -89,16 +89,14 @@ public class FragmentLC extends Fragment{
             });
 
         // Folderbtn 처리 부분
-        /*
         Folderbtn_LC = (ImageButton) view.findViewById(R.id.FolderBtnLC);
         Folderbtn_LC.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), FileManage.class);
-                getActivity().startActivity(intent);
+                startActivity(intent);
             }
         });
-        */
         return view;
     }
 
