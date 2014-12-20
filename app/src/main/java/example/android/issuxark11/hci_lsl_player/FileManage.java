@@ -16,10 +16,9 @@ public class FileManage extends Activity {
         setContentView(R.layout.file_manage);
 
         ListView LV = (ListView) findViewById(R.id.listView);
-        ArrayAdapter<String> adapter;
+        //ArrayAdapter<String> adapter;
+        CustomAdapter adapter = new CustomAdapter();
         //adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1);
-        //adapter = new CustomAdapter();
-        adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1);
         LV.setAdapter(adapter);
 
         adapter.add("LC 1-1.mp3");

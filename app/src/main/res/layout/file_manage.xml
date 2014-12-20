@@ -17,7 +17,7 @@
         android:text="Large Text" />
 
     <ListView
+        android:id="@+id/listView"
         android:layout_width="match_parent"
-        android:layout_height="484dp"
-        android:id="@+id/listView" />
+        android:layout_height="484dp" />
 </LinearLayout>

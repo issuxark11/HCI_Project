@@ -56,6 +56,10 @@ public class CustomAdapter extends BaseAdapter {
             LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             convertView = inflater.inflate(R.layout.custom_item, parent, false);
 
+            // TextView에 현재 position의 문자열 추가
+            TextView text = (TextView) convertView.findViewById(R.id.item_text);
+            text.setText(m_List.get(position));
+
             // 리스트 아이템을 터치 했을 때 이벤트 발생
             convertView.setOnClickListener(new OnClickListener() {
 
@@ -63,17 +67,6 @@ public class CustomAdapter extends BaseAdapter {
                 public void onClick(View v) {
                     // 터치 시 해당 아이템 이름 출력
                     Toast.makeText(context, "리스트 클릭 : "+m_List.get(pos), Toast.LENGTH_SHORT).show();
-                }
-            });
-
-            // 리스트 아이템을 길게 터치 했을 떄 이벤트 발생
-            convertView.setOnLongClickListener(new OnLongClickListener() {
-
-                @Override
-                public boolean onLongClick(View v) {
-                    // 터치 시 해당 아이템 이름 출력
-                    Toast.makeText(context, "리스트 롱 클릭 : "+m_List.get(pos), Toast.LENGTH_SHORT).show();
-                    return true;
                 }
             });
         }
