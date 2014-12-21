@@ -9,17 +9,16 @@
         android:id="@+id/item_text"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="15dp"
+        android:layout_marginLeft="20dp"
         android:layout_marginBottom="15dp"
         android:layout_marginTop="15dp"
         style="@style/ListStyle"/>
 
     <CheckBox
         android:id="@+id/checkBox"
-        android:text="File Selected"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginRight="25dp"
+        android:layout_marginRight="35dp"
         android:layout_alignBottom="@+id/item_text"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
